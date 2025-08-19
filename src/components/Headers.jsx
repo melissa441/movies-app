@@ -2,6 +2,7 @@
 import { Sun, Moon, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useDarkMode } from "../hooks/useDarkMode";
+import { NavLink } from 'react-router-dom'
 
 export default function Header() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
@@ -21,25 +22,25 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#" className="text-pink-500 font-medium">
+          <NavLink to='/' className="font-medium">
             Home
-          </a>
+          </NavLink>
           <div className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors flex gap-10 items-center">
-          <a href="#" >
+          <NavLink to="/src/pages/explore.jsx">
             Explore
-          </a>
-          <a href="#">
+          </NavLink>
+          <NavLink >
             Genre
-          </a>
-          <a href="#">
+          </NavLink>
+          <NavLink>
             News
-          </a>
-          <a href="#">
+          </NavLink>
+          <NavLink to="/src/pages/movies.jsx">
             Movies
-          </a>
-          <a href="#">
+          </NavLink>
+          <NavLink to="/src/pages/tv-shows.jsx">
             TV Shows
-          </a>
+          </NavLink>
           </div>
         </nav>
 

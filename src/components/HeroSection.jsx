@@ -22,8 +22,8 @@ export default function HeroSection() {
           </p>
 
           <div className="flex justify-center lg:justify-start">
-            <button className="flex items-center space-x-3 px-4 sm:px-6 py-2 sm:py-3 border border-pink-500 text-pink-500 rounded-lg hover:bg-pink-50 dark:hover:bg-pink-900/20 transition-all duration-200 cursor-pointer text-sm sm:text-base">
-              <div className="w-5 h-5 sm:w-6 sm:h-6 bg-pink-500 rounded-full flex items-center justify-center">
+            <button className="flex items-center space-x-3 px-4 sm:px-6 py-2 sm:py-3 border border-gray-300 text-gray-300 rounded-lg hover:bg-pink-50 dark:hover:bg-pink-900/20 transition-all duration-200 cursor-pointer text-sm sm:text-base">
+              <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gray-300 rounded-full flex items-center justify-center">
                 <Play className="w-2 h-2 sm:w-3 sm:h-3 text-white fill-white" />
               </div>
               <span>Watch Tutorial</span>
@@ -43,7 +43,7 @@ export default function HeroSection() {
 
             {/* Play Button Overlay */}
             <button className="absolute inset-0 w-8 h-8 sm:w-10 sm:h-10 cursor-pointer bg-white rounded-full flex items-center justify-center shadow-lg z-40 hover:scale-105 transition-transform m-auto">
-              <Play className="w-4 h-4 sm:w-6 sm:h-6 text-red-500" />
+              <Play className="w-4 h-4 sm:w-6 sm:h-6 text-gray-300" />
             </button>
           </div>
 

@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import Header from "./Headers";
-import HeroSection from "./HeroSection";
-import MovieSection from "./MovieSection";
+import Header from "../components/Headers";
+import MovieSection from "../components/MovieSection";
 import { urlPath } from "../types/env";
 import { options } from "../types/variable";
 
-export default function MoviesBazerApp() {
+export default function Explore() {
   const [trendingMovies, setTrendingMovies] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -39,15 +38,9 @@ export default function MoviesBazerApp() {
   return (
     <div className="min-h-screen bg-white dark:bg-black transition-colors duration-200 px-12">
       <Header />
-      <HeroSection />
       <MovieSection
-        title="Trending"
-        movies={trendingMovies.slice(0,12)}
-        backgroundColor="bg-pink-50"
-      />
-      <MovieSection
-        title={"YOU MAY LIKE"}
-        movies={trendingMovies.slice(0,12)}
+        title="Explore more movies"
+        movies={trendingMovies.slice(0,24)}
         backgroundColor="bg-pink-50"
       />
       {/* You can fetch different endpoints for recommended movies */}

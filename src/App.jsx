@@ -3,6 +3,9 @@ import MoviesBazerApp from "./components/MoviesBazerApp";
 import MovieDetails from "./pages/MovieDetails";
 import { useEffect, useState } from "react";
 import ScaleLoader from "react-spinners/ScaleLoader";
+import Explore from "./pages/explore";
+import Movie from "./pages/movies";
+import TvShow from "./pages/tv-shows";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -28,6 +31,9 @@ function App() {
       <Routes>
         <Route path="/" element={<MoviesBazerApp />} />
         <Route path="/movie/:id" element={<MovieDetails />} />
+        <Route path="/src/pages/explore.jsx" element={<Explore />} />
+        <Route path="/src/pages/movies.jsx" element={<Movie />} />
+        <Route path="/src/pages/Tv-shows.jsx" element={<TvShow />} />
       </Routes>
     </Router>
   );
