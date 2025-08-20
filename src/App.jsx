@@ -6,23 +6,33 @@ import ScaleLoader from "react-spinners/ScaleLoader";
 import Explore from "./pages/explore";
 import Movie from "./pages/movies";
 import TvShow from "./pages/tv-shows";
+import { motion } from "framer-motion";
 
 function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate a loading time
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 4000);
-
+    const timer = setTimeout(() => setLoading(false), 4000);
     return () => clearTimeout(timer);
   }, []);
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-screen">
-        <ScaleLoader loading={loading} />
+      <div className="flex justify-center items-center h-screen bg-gray-900">
+        <div className="flex gap-3">
+          {[0, 1, 2].map((i) => (
+            <motion.span
+              key={i}
+              className="w-4 h-4 bg-teal-400 rounded-full"
+              animate={{ y: [0, -15, 0] }}
+              transition={{
+                repeat: Infinity,
+                duration: 0.6,
+                delay: i * 0.2,
+              }}
+            />
+          ))}
+        </div>
       </div>
     );
   }
